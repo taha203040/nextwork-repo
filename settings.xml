@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>nextwork-daily-MyDailyDevops-cicd</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>nextwork-daily-MyDailyDevops-cicd</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>nextwork-daily-MyDailyDevops-cicd</id>
+        <url>https://nextwork-daily-742705054498.d.codeartifact.us-east-1.amazonaws.com/maven/MyDailyDevops-cicd/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>nextwork-daily-MyDailyDevops-cicd</id>
+    <name>nextwork-daily-MyDailyDevops-cicd</name>
+    <url>https://nextwork-daily-742705054498.d.codeartifact.us-east-1.amazonaws.com/maven/MyDailyDevops-cicd/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
